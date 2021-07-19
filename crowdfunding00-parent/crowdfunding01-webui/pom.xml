@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cc.stevenyin</groupId>
+    <artifactId>crowdfunding00-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>crowdfunding01-webui</artifactId>
+  <packaging>war</packaging>
+  <name>Crowd Funding</name>
+  <description>Learning https://www.bilibili.com/video/BV1bE411T7oZ</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>cc.stevenyin</groupId>
+  		<artifactId>crowdfunding02-component</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>cc.stevenyin</groupId>
+  		<artifactId>common-tools</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+</project>
