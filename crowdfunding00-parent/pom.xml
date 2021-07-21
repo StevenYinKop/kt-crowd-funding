@@ -22,6 +22,7 @@
 		<crowdfunding.spring.version>4.3.21.RELEASE</crowdfunding.spring.version>
 		<!-- 声明属性，对SpringSecurity 的版本进行统一管理 -->
 		<crowdfunding.spring.security.version>4.2.10.RELEASE</crowdfunding.spring.security.version>
+		<crowdfunding.version>0.0.1-SNAPSHOT</crowdfunding.version>
 	</properties>
 
 	<dependencies>
@@ -194,6 +195,22 @@
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-taglibs</artifactId>
 				<version>${crowdfunding.spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cc.stevenyin</groupId>
+				<artifactId>crowdfunding01-webui</artifactId>
+				<version>${crowdfunding.version}</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>cc.stevenyin</groupId>
+				<artifactId>crowdfunding02-component</artifactId>
+				<version>${crowdfunding.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cc.stevenyin</groupId>
+				<artifactId>crowdfunding03-entity</artifactId>
+				<version>${crowdfunding.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
