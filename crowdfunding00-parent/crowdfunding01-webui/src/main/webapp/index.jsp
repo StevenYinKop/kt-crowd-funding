@@ -12,6 +12,6 @@
 </head>
 <body>
 HELLO!
-<a href="${pageContext.request.contentPath}/test/ssm.html">测试</a>
+<a href="${pageContext.request.contextPath}/test/ssm.html">测试</a>
 </body>
 </html>
