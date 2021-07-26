@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="AutoImportedSourceRoots">
+    <option name="directories">
+      <list>
+        <option value="C:\Users\Steven.Yin\Workspace\kt-crowd-funding\crowdfunding00-parent\crowdfunding02-component/src/main/kotlin" />
+      </list>
+    </option>
+  </component>
   <component name="FacetManager">
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="crowdfunding02-component" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
