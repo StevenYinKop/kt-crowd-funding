@@ -1,6 +1,6 @@
 package cc.stevenyin.crowd.mapper
 
-import cc.stevenyin.crowd.entity.TestRecord
+import cc.stevenyin.crowd.entity.AdminRecord
 import org.apache.ibatis.annotations.*
 import org.apache.ibatis.type.JdbcType
 import org.mybatis.dynamic.sql.delete.render.DeleteStatementProvider
@@ -11,7 +11,7 @@ import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider
 import org.mybatis.dynamic.sql.util.SqlProviderAdapter
 
 @Mapper
-interface TestMapper {
+interface AdminMapper {
     @SelectProvider(type=SqlProviderAdapter::class, method="select")
     fun count(selectStatement: SelectStatementProvider): Long
 
@@ -19,23 +19,25 @@ interface TestMapper {
     fun delete(deleteStatement: DeleteStatementProvider): Int
 
     @InsertProvider(type=SqlProviderAdapter::class, method="insert")
-    fun insert(insertStatement: InsertStatementProvider<TestRecord>): Int
+    fun insert(insertStatement: InsertStatementProvider<AdminRecord>): Int
 
     @InsertProvider(type=SqlProviderAdapter::class, method="insertMultiple")
-    fun insertMultiple(multipleInsertStatement: MultiRowInsertStatementProvider<TestRecord>): Int
+    fun insertMultiple(multipleInsertStatement: MultiRowInsertStatementProvider<AdminRecord>): Int
 
     @SelectProvider(type=SqlProviderAdapter::class, method="select")
-    @ResultMap("TestRecordResult")
-    fun selectOne(selectStatement: SelectStatementProvider): TestRecord?
+    @ResultMap("AdminRecordResult")
+    fun selectOne(selectStatement: SelectStatementProvider): AdminRecord?
 
     @SelectProvider(type=SqlProviderAdapter::class, method="select")
-    @Results(id="TestRecordResult", value = [
-        Result(column="id", property="id", jdbcType=JdbcType.VARCHAR, id=true),
-        Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
-        Result(column="age", property="age", jdbcType=JdbcType.INTEGER),
-        Result(column="description", property="description", jdbcType=JdbcType.VARCHAR)
+    @Results(id="AdminRecordResult", value = [
+        Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
+        Result(column="login_acct", property="loginAcct", jdbcType=JdbcType.VARCHAR),
+        Result(column="user_pswd", property="userPswd", jdbcType=JdbcType.CHAR),
+        Result(column="user_name", property="userName", jdbcType=JdbcType.VARCHAR),
+        Result(column="email", property="email", jdbcType=JdbcType.VARCHAR),
+        Result(column="create_time", property="createTime", jdbcType=JdbcType.CHAR)
     ])
-    fun selectMany(selectStatement: SelectStatementProvider): List<TestRecord>
+    fun selectMany(selectStatement: SelectStatementProvider): List<AdminRecord>
 
     @UpdateProvider(type=SqlProviderAdapter::class, method="update")
     fun update(updateStatement: UpdateStatementProvider): Int
