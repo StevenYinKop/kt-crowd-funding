@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <!-- 指定日志的输出位置 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 时间, 所属线程, 日志级别, 日志打印的类, 日志主题内容, 换行-->
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] [%-5level] %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+    <!-- 设置全局级别的日志, 顺序: DEBUG, INFO, WARN, ERROR -->
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <!-- 打印特定需求的局部日志级别 -->
+    <logger name="cc.stevenyin.crowd.mapper" level="INFO"/>
+</configuration>
